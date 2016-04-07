@@ -1,0 +1,90 @@
+@mixin contact--connect-navbar--icon {
+  & {
+    text-align: center;
+    width: 35px;
+    height: 29px;
+    color: #aeaeae;
+    display: inline-block;
+    float: left;
+    margin-right: 5px;
+    padding-top: 6px;
+    }
+}
+
+.contact {
+  background-color: white;
+  padding-top: 20px;
+  margin: 15px auto;
+  box-shadow: $box-shadow;
+
+
+  &--left {
+    float: left;
+    width: 50%;
+    margin: 0 5% auto 2.5%;
+    line-height: 1.5;
+
+  h2 {
+    font-weight:300;
+  }
+
+    .contact--connect-navbar {
+      height: 30px;
+      float: left;
+
+      .facebook {
+        @include contact--connect-navbar--icon;
+        background-color: #4f4f4f;
+      }
+      .rss {
+        @include contact--connect-navbar--icon;
+        color: #aaa;
+        background-color:#666;
+      }
+      .twitter {
+        @include contact--connect-navbar--icon;
+        background-color: #7a7a7a;
+      }
+
+      .youtube{
+        @include contact--connect-navbar--icon;
+        background-color: #757575;
+      }
+    }
+  }
+  &--right {
+    width: 39%;
+    float: left;
+    margin: auto 2.5% auto 0;
+
+
+    .form-item {
+        margin: 20px auto;
+          input, textarea {
+          font-size: 1.1rem;
+          line-height: 2;
+          width: 100%;
+          border: 1px solid #aaa;
+          box-shadow: inset 3px 3px rgba(192, 192, 192, 0.7);
+          resize: none;
+        }
+      }
+
+    .form-submit {
+        text-align: center;
+        width: 50%;
+        height: 30px;
+        color: white;
+        padding-top:15px;
+        background-color: #B4282F;
+        float:right;
+        margin-bottom: 30px;
+
+        a {
+          text-decoration: none;
+          color: white;
+          font-weight: 200;
+        }
+      }
+    }
+}

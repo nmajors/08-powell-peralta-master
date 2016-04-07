@@ -1,0 +1,82 @@
+@mixin small-image{
+  box-sizing: border-box;
+  display: inline-block;
+  width: 47%;
+  height: 216px;
+  border: 5px solid white;
+  padding-top: 10%;
+  margin-right: 3%;
+  margin-bottom: 20px;
+  box-shadow: $box-shadow;
+
+}
+
+@mixin wide-image{
+  box-sizing: border-box;
+  display: inline-block;
+  width: 97%;
+  height:216px;
+  border: 5px solid white;
+  padding-top: 10%;
+  margin-right: 3%;
+  box-shadow: $box-shadow;
+}
+
+@mixin tall-image{
+  box-sizing: border-box;
+  padding-top: 10%;
+  display: inline-block;
+  width: 100%;
+  height: 452px;
+  border: 5px solid white;
+  margin-bottom: 20px;
+  box-shadow: $box-shadow;
+}
+.gallery {
+  color: white;
+  font-size: 2.75rem;
+  font-weight:600;
+  text-align: center;
+  text-transform: uppercase;
+  &--left {
+    display: inline-block;
+    float: left;
+    width: 68%
+  }
+  &--item1{
+    @include small-image;
+    background: url("../images/sk8er-4.png");
+    background-position: right;
+    float: left;
+  }
+  &--item2{
+    @include small-image;
+    background: url('../images/sk8er-3.png');
+    float: left;
+  }
+  &--item3{
+    @include wide-image;
+    background: url('../images/sk8er-1.png');
+    background-position: center;
+    float: left;
+  }
+  &--right{
+    display: inline-block;
+    width: 32%;
+    float: left;
+  }
+    &--item4{
+      @include tall-image;
+      background: url('../images/sk8er-2.png');
+      background-position: 80% 0;
+      float: right;
+      }
+  }
+  .skaterName{
+    @media screen and (max-width: 375px)  {
+    font-size: 1.25rem;
+  }
+    @media screen and (min-width:680px){
+      font-size: 2rem;
+    }
+  }
