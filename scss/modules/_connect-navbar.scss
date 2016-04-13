@@ -15,24 +15,28 @@
 }
 
 .connect-navbar {
-  clear: both;
-  height: 75px;
+  display: none;
+  @media screen and (min-width: 600px){
+    display: block;
+    clear: both;
+    height: 75px;
 
-  .youtube {
-    @include icon;
-    background-color:#B2382D;
-  }
-  .twitter {
-    @include icon;
-    background-color:#6A8DC7;
-  }
-  .rss {
-    @include icon;
-    background-color: #cc8f32;
-  }
+    .youtube {
+      @include icon;
+      background-color:#B2382D;
+    }
+    .twitter {
+      @include icon;
+      background-color:#6A8DC7;
+    }
+    .rss {
+      @include icon;
+      background-color: #cc8f32;
+    }
 
-  .facebook{
-    @include icon;
-    background-color: #455696;
+    .facebook{
+      @include icon;
+      background-color: #455696;
+    }
   }
 }

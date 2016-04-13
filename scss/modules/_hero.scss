@@ -1,4 +1,9 @@
 .hero {
+  display: none;
+  @media screen and (min-width: 600px){
+    display: block;
+    margin-bottom: 15px;
+  }
   background: url("../images/top-image.png") no-repeat;
   background-position: 25% 25%;
   border: 5px solid white;
@@ -12,8 +17,6 @@
   img {
     position: absolute;
     margin: 35px auto 31px 15px;
-    size: 100%;
-
   }
     .overlay {
       position:absolute;

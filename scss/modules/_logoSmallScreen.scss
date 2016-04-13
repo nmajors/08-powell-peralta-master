@@ -1,0 +1,65 @@
+@mixin icon--smallScreen {
+  & {
+    box-sizing: border-box;
+    font-size: 2rem;
+    text-align: center;
+    width: 23%;
+    height: 60px;
+    color: #aaa;
+    display: inline-block;
+    float: right;
+    padding-top: 10px;
+    box-shadow: $box-shadow;
+    }
+}
+
+.logoSmallScreen {
+  // display:block;
+  height: 120px;
+  margin: 15px 0;
+  text-align: center;
+  // clear: both;
+    img{
+      display: inline-block;
+      margin: 0 auto;
+      width: 40%;
+      height: 100%;
+    }
+    &--connect-navbar{
+      display: inline-block;
+      height: 75px;
+      float: right;
+      width: 49%;
+
+      .youtube {
+        @include icon--smallScreen;
+        background-color:#B2382D;
+        margin-left: 2%;
+      }
+      .twitter {
+        @include icon--smallScreen;
+        background-color:#6A8DC7;
+        margin-left: 2%;
+      }
+      .rss {
+        @include icon--smallScreen;
+        background-color: #cc8f32;
+        margin-left: 2%;
+      }
+
+      .facebook{
+        @include icon--smallScreen;
+                        margin-left: 0;
+        background-color: #455696;
+      }
+    }
+  // img {
+  //   width: 90%;
+  //   display: inline-block;
+  //   margin: 0 auto;
+  // }
+
+  @media screen and (min-width: 600px) {
+    display: none;
+}
+}

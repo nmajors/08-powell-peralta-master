@@ -1,12 +1,27 @@
 .skateboard-lineup {
   background-color: white;
   box-shadow: $box-shadow;
+  width: 100%;
+  .largerDisplay {
+    display: none;
+    @media screen and (min-width: 600px){
+      display: inline-block;
+    }
+  }
 
     &--board {
       text-align: center;
       display: inline-block;
       margin: 15px auto;
-      width: 10%;
+
+      width: 20%;
+      @media screen and (min-width: 600px){
+        width: 10%;
+      }
       float: left;
+
+
+
   }
+
 }

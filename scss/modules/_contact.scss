@@ -29,26 +29,30 @@
   }
 
     .contact--connect-navbar {
-      height: 30px;
-      float: left;
+      display: none;
+      @media screen and (min-width: 800px){
+        display: block;
+        height: 30px;
+        float: left;
 
-      .facebook {
-        @include contact--connect-navbar--icon;
-        background-color: #4f4f4f;
-      }
-      .rss {
-        @include contact--connect-navbar--icon;
-        color: #aaa;
-        background-color:#666;
-      }
-      .twitter {
-        @include contact--connect-navbar--icon;
-        background-color: #7a7a7a;
-      }
+        .facebook {
+          @include contact--connect-navbar--icon;
+          background-color: #4f4f4f;
+        }
+        .rss {
+          @include contact--connect-navbar--icon;
+          color: #aaa;
+          background-color:#666;
+        }
+        .twitter {
+          @include contact--connect-navbar--icon;
+          background-color: #7a7a7a;
+        }
 
-      .youtube{
-        @include contact--connect-navbar--icon;
-        background-color: #757575;
+        .youtube{
+          @include contact--connect-navbar--icon;
+          background-color: #757575;
+        }
       }
     }
   }

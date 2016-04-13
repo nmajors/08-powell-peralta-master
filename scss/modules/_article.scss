@@ -5,17 +5,23 @@
 // }
 // @media screen and (min-width: 381px){
 .article {
-  margin: 20px auto;
+  margin: 0 auto;
+  @media screen and (min-wdith: 375px) {
+    margin-bottom: 15px;
+  }
   width: 100%;
   // vertical-align: middle;
   &--content {
     background-color: white;
     border: 1px solid #666;
     // box-sizing: border-box;
-    @media only screen and (max-width : 375px) {
+
+    @media only screen and (min-width: 375px) {
       box-sizing: border-box;
+      display: inline-block;
       width: 100%;
-      height: 130px;
+
+      margin: 0 0 1rem;
     }
     @media screen and (min-width: 830px) {
       box-sizing: border-box;
@@ -27,7 +33,7 @@
       &:nth-child(1) {
         margin-left: 0;
       }
-    
+
     }
     // @include breakpoint ($iphone-width) {
     //   width: 500px;
@@ -51,14 +57,14 @@
     //   top: 20px;
     //   right: 20px;
     // }
-    @media screen and (min-width: 840px) {
-      position: absolute;
-      bottom: 10px;
-      left: 25%;
-      text-align: center;
-      display: block;
-      margin: 20px;
-    }
+    // @media screen and (min-width: 840px) {
+    //   position: absolute;
+    //   bottom: 10px;
+    //   left: 25%;
+    //   text-align: center;
+    //   display: block;
+    //   margin: 20px;
+    // }
     a {
       text-decoration: none;
       color: #B4282F;

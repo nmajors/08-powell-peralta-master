@@ -33,11 +33,22 @@
   box-shadow: $box-shadow;
 }
 .gallery {
+  display: none;
+  @media screen and (min-width: 600px){
+    display: block;
   color: white;
-  font-size: 2.75rem;
   font-weight:600;
   text-align: center;
   text-transform: uppercase;
+
+  @media screen and (min-width: 600px) {
+    font-size: 2rem;
+  }
+
+  @media screen and (min-width: 800px) {
+    font-size: 2.75rem;
+  }
+
   &--left {
     display: inline-block;
     float: left;
@@ -45,33 +56,55 @@
   }
   &--item1{
     @include small-image;
+    float: left;
     background: url("../images/sk8er-4.png");
     background-position: right;
-    float: left;
+    display: none;
+
+    @media screen and (min-width: 600px) {
+      display: block;
+    }
   }
   &--item2{
     @include small-image;
     background: url('../images/sk8er-3.png');
     float: left;
+    display: none;
+
+    @media screen and (min-width: 600px) {
+      display: block;
+    }
   }
   &--item3{
     @include wide-image;
     background: url('../images/sk8er-1.png');
     background-position: center;
     float: left;
+    display: none;
+
+    @media screen and (min-width: 600px) {
+      display: block;
+    }
   }
   &--right{
     display: inline-block;
     width: 32%;
     float: left;
   }
-    &--item4{
+  &--item4{
+    background: url('../images/sk8er-2.png');
+    background-position: 80% 0;
+
+    @media screen and (min-width: 600px) {
       @include tall-image;
-      background: url('../images/sk8er-2.png');
-      background-position: 80% 0;
       float: right;
-      }
+    }
+
+    }
+
+
   }
+}
   .skaterName{
     @media screen and (max-width: 375px)  {
     font-size: 1.25rem;

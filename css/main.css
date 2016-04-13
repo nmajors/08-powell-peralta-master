@@ -11,6 +11,7 @@ main {
   margin-bottom: 20px; }
 
 .container {
+  min-width: 500px;
   max-width: 940px;
   margin: 0 auto; }
 
@@ -19,26 +20,29 @@ main {
   zoom: 1; }
 
 .article {
-  margin: 20px auto;
+  margin: 0 auto;
   width: 100%; }
+  @media screen and (min-wdith: 375px) {
+    .article {
+      margin-bottom: 15px; } }
   .article--content {
     background-color: white;
     border: 1px solid #666;
     padding: 3%;
     box-shadow: 0 5px rgba(230, 230, 230, 0.3); }
-    @media only screen and (max-width: 375px) {
+    @media only screen and (min-width: 375px) {
       .article--content {
         box-sizing: border-box;
+        display: inline-block;
         width: 100%;
-        height: 130px; } }
-    @media screen and (min-width: 840px) {
+        margin: 0 0 1rem; } }
+    @media screen and (min-width: 830px) {
       .article--content {
         box-sizing: border-box;
         width: 32%;
         height: 355px;
         margin-left: 2%;
-        display: inline-block;
-        position: relative; }
+        display: inline-block; }
         .article--content:nth-child(1) {
           margin-left: 0; } }
   .article--headline {
@@ -47,103 +51,129 @@ main {
   .article--date {
     font-size: 0.85rem;
     color: #bbb; }
-  @media screen and (min-width: 840px) {
-    .article--read-more {
-      position: absolute;
-      bottom: 10px;
-      left: 25%;
-      text-align: center;
-      display: block;
-      margin: 20px; } }
   .article--read-more a {
     text-decoration: none;
     color: #B4282F;
     font-weight: bold; }
 
 .connect-navbar {
-  clear: both;
-  height: 75px; }
-  .connect-navbar .youtube {
-    background-color: #B2382D; }
-    .connect-navbar .youtube {
-      font-size: 2.5rem;
-      text-align: center;
-      width: 70px;
-      height: 55px;
-      color: #aaa;
-      display: inline-block;
-      float: right;
-      padding-top: 10px;
-      margin-left: 15px;
-      box-shadow: 0 5px rgba(230, 230, 230, 0.3); }
-  .connect-navbar .twitter {
-    background-color: #6A8DC7; }
-    .connect-navbar .twitter {
-      font-size: 2.5rem;
-      text-align: center;
-      width: 70px;
-      height: 55px;
-      color: #aaa;
-      display: inline-block;
-      float: right;
-      padding-top: 10px;
-      margin-left: 15px;
-      box-shadow: 0 5px rgba(230, 230, 230, 0.3); }
-  .connect-navbar .rss {
-    background-color: #cc8f32; }
-    .connect-navbar .rss {
-      font-size: 2.5rem;
-      text-align: center;
-      width: 70px;
-      height: 55px;
-      color: #aaa;
-      display: inline-block;
-      float: right;
-      padding-top: 10px;
-      margin-left: 15px;
-      box-shadow: 0 5px rgba(230, 230, 230, 0.3); }
-  .connect-navbar .facebook {
-    background-color: #455696; }
-    .connect-navbar .facebook {
-      font-size: 2.5rem;
-      text-align: center;
-      width: 70px;
-      height: 55px;
-      color: #aaa;
-      display: inline-block;
-      float: right;
-      padding-top: 10px;
-      margin-left: 15px;
-      box-shadow: 0 5px rgba(230, 230, 230, 0.3); }
+  display: none; }
+  @media screen and (min-width: 600px) {
+    .connect-navbar {
+      display: block;
+      clear: both;
+      height: 75px; }
+      .connect-navbar .youtube {
+        background-color: #B2382D; }
+        .connect-navbar .youtube {
+          font-size: 2.5rem;
+          text-align: center;
+          width: 70px;
+          height: 55px;
+          color: #aaa;
+          display: inline-block;
+          float: right;
+          padding-top: 10px;
+          margin-left: 15px;
+          box-shadow: 0 5px rgba(230, 230, 230, 0.3); }
+      .connect-navbar .twitter {
+        background-color: #6A8DC7; }
+        .connect-navbar .twitter {
+          font-size: 2.5rem;
+          text-align: center;
+          width: 70px;
+          height: 55px;
+          color: #aaa;
+          display: inline-block;
+          float: right;
+          padding-top: 10px;
+          margin-left: 15px;
+          box-shadow: 0 5px rgba(230, 230, 230, 0.3); }
+      .connect-navbar .rss {
+        background-color: #cc8f32; }
+        .connect-navbar .rss {
+          font-size: 2.5rem;
+          text-align: center;
+          width: 70px;
+          height: 55px;
+          color: #aaa;
+          display: inline-block;
+          float: right;
+          padding-top: 10px;
+          margin-left: 15px;
+          box-shadow: 0 5px rgba(230, 230, 230, 0.3); }
+      .connect-navbar .facebook {
+        background-color: #455696; }
+        .connect-navbar .facebook {
+          font-size: 2.5rem;
+          text-align: center;
+          width: 70px;
+          height: 55px;
+          color: #aaa;
+          display: inline-block;
+          float: right;
+          padding-top: 10px;
+          margin-left: 15px;
+          box-shadow: 0 5px rgba(230, 230, 230, 0.3); } }
 
 .site-navbar {
   width: 100%;
   text-align: center; }
   .site-navbar .navicon {
     display: inline-block;
-    vertical-align: middle;
-    text-align: center;
-    width: 24%;
-    height: 30px;
+    width: 49%;
+    height: 40px;
+    margin-bottom: 15px;
+    padding-top: 20px;
     color: white;
-    margin: 15px .75% 20px 0;
-    padding-top: 15px;
     text-transform: uppercase;
     background-color: #B4282F;
     box-shadow: 0 5px rgba(230, 230, 230, 0.3); }
+    .site-navbar .navicon:nth-child(odd) {
+      margin-right: 2%; }
+    @media screen and (min-width: 600px) {
+      .site-navbar .navicon {
+        width: 24%;
+        height: 30px;
+        margin: 15px 1.3% 20px 0;
+        padding-top: 15px; }
+        .site-navbar .navicon:nth-child(odd) {
+          margin-right: 1.3%; }
+        .site-navbar .navicon:nth-child(4) {
+          margin-right: 0; } }
     .site-navbar .navicon--text {
-      font-weight: 600;
-      padding: 0 .5%;
-      display: block; }
-    .site-navbar .navicon--text span {
-      text-align: justify;
-      font-weight: 200;
-      padding: 0 .5%; }
-
-.navicon:nth-child(4) {
-  margin-right: 0; }
+      font-weight: 400;
+      display: inline;
+      font-size: 1.2rem;
+      width: 90%;
+      margin: 0 auto; }
+      @media screen and (min-width: 600px) {
+        .site-navbar .navicon--text {
+          display: block;
+          font-size: .8rem; } }
+      @media screen and (min-width: 800px) {
+        .site-navbar .navicon--text {
+          display: inline-block; } }
+      @media screen and (min-width: 1000px) {
+        .site-navbar .navicon--text {
+          font-size: 1rem; } }
+      .site-navbar .navicon--text .leftDash {
+        display: none; }
+        @media screen and (min-width: 800px) {
+          .site-navbar .navicon--text .leftDash {
+            display: inline-block;
+            font-weight: 600;
+            float: left; } }
+      .site-navbar .navicon--text .rightDash {
+        display: none; }
+        @media screen and (min-width: 800px) {
+          .site-navbar .navicon--text .rightDash {
+            font-weight: 600;
+            display: inline-block;
+            float: right; } }
 
 .hero {
+  display: none;
   background: url("../images/top-image.png") no-repeat;
   background-position: 25% 25%;
   border: 5px solid white;
@@ -152,10 +182,13 @@ main {
   box-sizing: border-box;
   position: relative;
   box-shadow: 0 5px rgba(230, 230, 230, 0.3); }
+  @media screen and (min-width: 600px) {
+    .hero {
+      display: block;
+      margin-bottom: 15px; } }
   .hero img {
     position: absolute;
-    margin: 35px auto 31px 15px;
-    size: 100%; }
+    margin: 35px auto 31px 15px; }
   .hero .overlay {
     position: absolute;
     top: 0;
@@ -167,77 +200,113 @@ main {
 
 .skateboard-lineup {
   background-color: white;
-  box-shadow: 0 5px rgba(230, 230, 230, 0.3); }
+  box-shadow: 0 5px rgba(230, 230, 230, 0.3);
+  width: 100%; }
+  .skateboard-lineup .largerDisplay {
+    display: none; }
+    @media screen and (min-width: 600px) {
+      .skateboard-lineup .largerDisplay {
+        display: inline-block; } }
   .skateboard-lineup--board {
     text-align: center;
     display: inline-block;
     margin: 15px auto;
-    width: 10%;
+    width: 20%;
     float: left; }
+    @media screen and (min-width: 600px) {
+      .skateboard-lineup--board {
+        width: 10%; } }
 
 .gallery {
-  color: white;
-  font-size: 2.75rem;
-  font-weight: 600;
-  text-align: center;
-  text-transform: uppercase; }
-  .gallery--left {
-    display: inline-block;
-    float: left;
-    width: 68%; }
-  .gallery--item1 {
-    box-sizing: border-box;
-    display: inline-block;
-    width: 47%;
-    height: 216px;
-    border: 5px solid white;
-    padding-top: 10%;
-    margin-right: 3%;
-    margin-bottom: 20px;
-    box-shadow: 0 5px rgba(230, 230, 230, 0.3);
-    background: url("../images/sk8er-4.png");
-    background-position: right;
-    float: left; }
-  .gallery--item2 {
-    box-sizing: border-box;
-    display: inline-block;
-    width: 47%;
-    height: 216px;
-    border: 5px solid white;
-    padding-top: 10%;
-    margin-right: 3%;
-    margin-bottom: 20px;
-    box-shadow: 0 5px rgba(230, 230, 230, 0.3);
-    background: url("../images/sk8er-3.png");
-    float: left; }
-  .gallery--item3 {
-    box-sizing: border-box;
-    display: inline-block;
-    width: 97%;
-    height: 216px;
-    border: 5px solid white;
-    padding-top: 10%;
-    margin-right: 3%;
-    box-shadow: 0 5px rgba(230, 230, 230, 0.3);
-    background: url("../images/sk8er-1.png");
-    background-position: center;
-    float: left; }
-  .gallery--right {
-    display: inline-block;
-    width: 32%;
-    float: left; }
-  .gallery--item4 {
-    box-sizing: border-box;
-    padding-top: 10%;
-    display: inline-block;
-    width: 100%;
-    height: 452px;
-    border: 5px solid white;
-    margin-bottom: 20px;
-    box-shadow: 0 5px rgba(230, 230, 230, 0.3);
-    background: url("../images/sk8er-2.png");
-    background-position: 80% 0;
-    float: right; }
+  display: none; }
+  @media screen and (min-width: 600px) {
+    .gallery {
+      display: block;
+      color: white;
+      font-weight: 600;
+      text-align: center;
+      text-transform: uppercase; } }
+  @media screen and (min-width: 600px) and (min-width: 600px) {
+    .gallery {
+      font-size: 2rem; } }
+  @media screen and (min-width: 600px) and (min-width: 800px) {
+    .gallery {
+      font-size: 2.75rem; } }
+  @media screen and (min-width: 600px) {
+      .gallery--left {
+        display: inline-block;
+        float: left;
+        width: 68%; }
+      .gallery--item1 {
+        box-sizing: border-box;
+        display: inline-block;
+        width: 47%;
+        height: 216px;
+        border: 5px solid white;
+        padding-top: 10%;
+        margin-right: 3%;
+        margin-bottom: 20px;
+        box-shadow: 0 5px rgba(230, 230, 230, 0.3);
+        float: left;
+        background: url("../images/sk8er-4.png");
+        background-position: right;
+        display: none; } }
+    @media screen and (min-width: 600px) and (min-width: 600px) {
+      .gallery--item1 {
+        display: block; } }
+  @media screen and (min-width: 600px) {
+      .gallery--item2 {
+        box-sizing: border-box;
+        display: inline-block;
+        width: 47%;
+        height: 216px;
+        border: 5px solid white;
+        padding-top: 10%;
+        margin-right: 3%;
+        margin-bottom: 20px;
+        box-shadow: 0 5px rgba(230, 230, 230, 0.3);
+        background: url("../images/sk8er-3.png");
+        float: left;
+        display: none; } }
+    @media screen and (min-width: 600px) and (min-width: 600px) {
+      .gallery--item2 {
+        display: block; } }
+  @media screen and (min-width: 600px) {
+      .gallery--item3 {
+        box-sizing: border-box;
+        display: inline-block;
+        width: 97%;
+        height: 216px;
+        border: 5px solid white;
+        padding-top: 10%;
+        margin-right: 3%;
+        box-shadow: 0 5px rgba(230, 230, 230, 0.3);
+        background: url("../images/sk8er-1.png");
+        background-position: center;
+        float: left;
+        display: none; } }
+    @media screen and (min-width: 600px) and (min-width: 600px) {
+      .gallery--item3 {
+        display: block; } }
+  @media screen and (min-width: 600px) {
+      .gallery--right {
+        display: inline-block;
+        width: 32%;
+        float: left; }
+      .gallery--item4 {
+        background: url("../images/sk8er-2.png");
+        background-position: 80% 0; } }
+    @media screen and (min-width: 600px) and (min-width: 600px) {
+      .gallery--item4 {
+        box-sizing: border-box;
+        padding-top: 10%;
+        display: inline-block;
+        width: 100%;
+        height: 452px;
+        border: 5px solid white;
+        margin-bottom: 20px;
+        box-shadow: 0 5px rgba(230, 230, 230, 0.3);
+        float: right; } }
 
 @media screen and (max-width: 375px) {
   .skaterName {
@@ -260,53 +329,57 @@ main {
     .contact--left h2 {
       font-weight: 300; }
     .contact--left .contact--connect-navbar {
-      height: 30px;
-      float: left; }
-      .contact--left .contact--connect-navbar .facebook {
-        background-color: #4f4f4f; }
-        .contact--left .contact--connect-navbar .facebook {
-          text-align: center;
-          width: 35px;
-          height: 29px;
-          color: #aeaeae;
-          display: inline-block;
-          float: left;
-          margin-right: 5px;
-          padding-top: 6px; }
-      .contact--left .contact--connect-navbar .rss {
-        color: #aaa;
-        background-color: #666; }
-        .contact--left .contact--connect-navbar .rss {
-          text-align: center;
-          width: 35px;
-          height: 29px;
-          color: #aeaeae;
-          display: inline-block;
-          float: left;
-          margin-right: 5px;
-          padding-top: 6px; }
-      .contact--left .contact--connect-navbar .twitter {
-        background-color: #7a7a7a; }
-        .contact--left .contact--connect-navbar .twitter {
-          text-align: center;
-          width: 35px;
-          height: 29px;
-          color: #aeaeae;
-          display: inline-block;
-          float: left;
-          margin-right: 5px;
-          padding-top: 6px; }
-      .contact--left .contact--connect-navbar .youtube {
-        background-color: #757575; }
-        .contact--left .contact--connect-navbar .youtube {
-          text-align: center;
-          width: 35px;
-          height: 29px;
-          color: #aeaeae;
-          display: inline-block;
-          float: left;
-          margin-right: 5px;
-          padding-top: 6px; }
+      display: none; }
+      @media screen and (min-width: 800px) {
+        .contact--left .contact--connect-navbar {
+          display: block;
+          height: 30px;
+          float: left; }
+          .contact--left .contact--connect-navbar .facebook {
+            background-color: #4f4f4f; }
+            .contact--left .contact--connect-navbar .facebook {
+              text-align: center;
+              width: 35px;
+              height: 29px;
+              color: #aeaeae;
+              display: inline-block;
+              float: left;
+              margin-right: 5px;
+              padding-top: 6px; }
+          .contact--left .contact--connect-navbar .rss {
+            color: #aaa;
+            background-color: #666; }
+            .contact--left .contact--connect-navbar .rss {
+              text-align: center;
+              width: 35px;
+              height: 29px;
+              color: #aeaeae;
+              display: inline-block;
+              float: left;
+              margin-right: 5px;
+              padding-top: 6px; }
+          .contact--left .contact--connect-navbar .twitter {
+            background-color: #7a7a7a; }
+            .contact--left .contact--connect-navbar .twitter {
+              text-align: center;
+              width: 35px;
+              height: 29px;
+              color: #aeaeae;
+              display: inline-block;
+              float: left;
+              margin-right: 5px;
+              padding-top: 6px; }
+          .contact--left .contact--connect-navbar .youtube {
+            background-color: #757575; }
+            .contact--left .contact--connect-navbar .youtube {
+              text-align: center;
+              width: 35px;
+              height: 29px;
+              color: #aeaeae;
+              display: inline-block;
+              float: left;
+              margin-right: 5px;
+              padding-top: 6px; } }
   .contact--right {
     width: 39%;
     float: left;
@@ -333,3 +406,77 @@ main {
         text-decoration: none;
         color: white;
         font-weight: 200; }
+
+.logoSmallScreen {
+  height: 120px;
+  margin: 15px 0;
+  text-align: center; }
+  .logoSmallScreen img {
+    display: inline-block;
+    margin: 0 auto;
+    width: 40%;
+    height: 100%; }
+  .logoSmallScreen--connect-navbar {
+    display: inline-block;
+    height: 75px;
+    float: right;
+    width: 49%; }
+    .logoSmallScreen--connect-navbar .youtube {
+      background-color: #B2382D;
+      margin-left: 2%; }
+      .logoSmallScreen--connect-navbar .youtube {
+        box-sizing: border-box;
+        font-size: 2rem;
+        text-align: center;
+        width: 23%;
+        height: 60px;
+        color: #aaa;
+        display: inline-block;
+        float: right;
+        padding-top: 10px;
+        box-shadow: 0 5px rgba(230, 230, 230, 0.3); }
+    .logoSmallScreen--connect-navbar .twitter {
+      background-color: #6A8DC7;
+      margin-left: 2%; }
+      .logoSmallScreen--connect-navbar .twitter {
+        box-sizing: border-box;
+        font-size: 2rem;
+        text-align: center;
+        width: 23%;
+        height: 60px;
+        color: #aaa;
+        display: inline-block;
+        float: right;
+        padding-top: 10px;
+        box-shadow: 0 5px rgba(230, 230, 230, 0.3); }
+    .logoSmallScreen--connect-navbar .rss {
+      background-color: #cc8f32;
+      margin-left: 2%; }
+      .logoSmallScreen--connect-navbar .rss {
+        box-sizing: border-box;
+        font-size: 2rem;
+        text-align: center;
+        width: 23%;
+        height: 60px;
+        color: #aaa;
+        display: inline-block;
+        float: right;
+        padding-top: 10px;
+        box-shadow: 0 5px rgba(230, 230, 230, 0.3); }
+    .logoSmallScreen--connect-navbar .facebook {
+      margin-left: 0;
+      background-color: #455696; }
+      .logoSmallScreen--connect-navbar .facebook {
+        box-sizing: border-box;
+        font-size: 2rem;
+        text-align: center;
+        width: 23%;
+        height: 60px;
+        color: #aaa;
+        display: inline-block;
+        float: right;
+        padding-top: 10px;
+        box-shadow: 0 5px rgba(230, 230, 230, 0.3); }
+  @media screen and (min-width: 600px) {
+    .logoSmallScreen {
+      display: none; } }
