@@ -1,26 +1,17 @@
-// @mixin iphone{
-//   @media(max-width: #{$iphone-width}){
-//     @content;
-//   }
-// }
-// @media screen and (min-width: 381px){
 .article {
   margin: 0 auto;
   @media screen and (min-wdith: 375px) {
     margin-bottom: 15px;
   }
   width: 100%;
-  // vertical-align: middle;
   &--content {
     background-color: white;
     border: 1px solid #666;
-    // box-sizing: border-box;
-
     @media only screen and (min-width: 375px) {
       box-sizing: border-box;
       display: inline-block;
       width: 100%;
-
+      padding-bottom: 30px;
       margin: 0 0 1rem;
     }
     @media screen and (min-width: 830px) {
@@ -29,18 +20,11 @@
       height: 355px;
       margin-left: 2%;
       display: inline-block;
-      // position: relative;
       &:nth-child(1) {
         margin-left: 0;
       }
-
     }
-    // @include breakpoint ($iphone-width) {
-    //   width: 500px;
-    // }
     padding: 3%;
-    // vertical-align: middle;
-    // position: relative;
     box-shadow: $box-shadow;
   }
   &--headline {
@@ -52,30 +36,11 @@
     color: #bbb;
   }
   &--read-more {
-    // @media screen and (max-width: 375px)  {
-    //   position: fixed;
-    //   top: 20px;
-    //   right: 20px;
-    // }
-    // @media screen and (min-width: 840px) {
-    //   position: absolute;
-    //   bottom: 10px;
-    //   left: 25%;
-    //   text-align: center;
-    //   display: block;
-    //   margin: 20px;
-    // }
     a {
       text-decoration: none;
       color: #B4282F;
       font-weight: bold;
     }
   }
+
 }
-// }
-// @media screen and (max-width: 380px){
-//   .article--content{
-//   width: 100%;
-//   display: block;
-//   }
-// }

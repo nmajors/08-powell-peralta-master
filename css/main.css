@@ -11,7 +11,6 @@ main {
   margin-bottom: 20px; }
 
 .container {
-  min-width: 500px;
   max-width: 940px;
   margin: 0 auto; }
 
@@ -35,6 +34,7 @@ main {
         box-sizing: border-box;
         display: inline-block;
         width: 100%;
+        padding-bottom: 30px;
         margin: 0 0 1rem; } }
     @media screen and (min-width: 830px) {
       .article--content {
@@ -144,7 +144,7 @@ main {
     .site-navbar .navicon--text {
       font-weight: 400;
       display: inline;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       width: 90%;
       margin: 0 auto; }
       @media screen and (min-width: 600px) {
@@ -322,10 +322,15 @@ main {
   margin: 15px auto;
   box-shadow: 0 5px rgba(230, 230, 230, 0.3); }
   .contact--left {
-    float: left;
-    width: 50%;
+    width: 100%;
+    display: none;
     margin: 0 5% auto 2.5%;
     line-height: 1.5; }
+    @media screen and (min-width: 800px) {
+      .contact--left {
+        display: inline-block;
+        float: left;
+        width: 50%; } }
     .contact--left h2 {
       font-weight: 300; }
     .contact--left .contact--connect-navbar {
@@ -381,27 +386,51 @@ main {
               margin-right: 5px;
               padding-top: 6px; } }
   .contact--right {
-    width: 39%;
-    float: left;
     margin: auto 2.5% auto 0; }
+    @media screen and (min-width: 800px) {
+      .contact--right {
+        width: 39%;
+        float: left; } }
+    .contact--right .contact--headline--small {
+      display: block;
+      width: 80%;
+      text-align: center;
+      margin: 15px auto;
+      font-weight: 400;
+      font-size: 1.2rem; }
+      @media screen and (min-width: 460px) {
+        .contact--right .contact--headline--small {
+          font-size: 1.4rem; } }
+      @media screen and (min-width: 800px) {
+        .contact--right .contact--headline--small {
+          display: none; } }
+    .contact--right form {
+      width: 80%;
+      margin: 0 auto; }
     .contact--right .form-item {
       margin: 20px auto; }
-      .contact--right .form-item input, .contact--right .form-item textarea {
+      .contact--right .form-item input,
+      .contact--right .form-item textarea {
         font-size: 1.1rem;
         line-height: 2;
         width: 100%;
+        display: inline-block;
         border: 1px solid #aaa;
         box-shadow: inset 3px 3px rgba(192, 192, 192, 0.7);
         resize: none; }
     .contact--right .form-submit {
       text-align: center;
-      width: 50%;
+      width: 30%;
+      margin-right: 10%;
       height: 30px;
       color: white;
       padding-top: 15px;
       background-color: #B4282F;
       float: right;
       margin-bottom: 30px; }
+      @media screen and (min-width: 800px) {
+        .contact--right .form-submit {
+          width: 50%; } }
       .contact--right .form-submit a {
         text-decoration: none;
         color: white;
